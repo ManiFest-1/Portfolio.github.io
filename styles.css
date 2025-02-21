@@ -345,6 +345,7 @@ footer a[href^="mailto:"]:hover {
     }
 
     .hero-image img {
+        margin-top: 20px;
         width: 200px;
         height: 200px;
     }
