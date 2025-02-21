@@ -5,7 +5,7 @@
     --text-color: #E0E0E0;
     --card-bg: #2A2A40;
     --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    --line-color: rgba(108, 99, 255, 0.05);
+    --line-color: rgba(108, 99, 255, 0.05); /* Используем основной цвет с прозрачностью */
 }
 
 body {
@@ -65,14 +65,20 @@ header {
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.6);
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+
 }
 
 nav a {
@@ -133,7 +139,7 @@ nav a:hover {
 .hero-image img {
     width: 300px;
     height: 300px;
-    border-radius: 50%;
+    border-radius: 60%;
     border: 5px solid var(--primary-color);
 }
 
