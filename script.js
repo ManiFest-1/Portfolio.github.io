@@ -1,9 +1,9 @@
-// Открытие модального окна с проектом
+
 function openProject(projectId) {
     document.getElementById(projectId).style.display = 'block';
 }
 
-// Закрытие модального окна
+
 function closeModal() {
     const modals = document.querySelectorAll('.modal');
     modals.forEach(modal => {
@@ -11,9 +11,28 @@ function closeModal() {
     });
 }
 
-// Закрытие модального окна при клике вне его
+
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         closeModal();
     }
 };
+document.getElementById('projectsButton').addEventListener('click', function(e) {
+    e.preventDefault(); 
+    const targetSection = document.getElementById('projects');
+    targetSection.scrollIntoView({
+        behavior: 'smooth', 
+        block: 'start'      
+    });
+});
+document.querySelectorAll('.smooth-scroll').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        const targetId = this.getAttribute('href'); 
+        const targetSection = document.querySelector(targetId); 
+        targetSection.scrollIntoView({
+            behavior: 'smooth', 
+            block: 'start'      
+        });
+    });
+});
