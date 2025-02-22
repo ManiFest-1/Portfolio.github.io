@@ -250,6 +250,19 @@ nav a:hover {
 
 .project-text {
     flex: 1;
+    font-weight: 500;
+}
+
+.project-link {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: font-size 0.3s ease;
+}
+
+.project-link:hover {
+    font-size: 2rem;
+    color: #6C63FF;
 }
 
 .modal {
